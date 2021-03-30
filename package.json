@@ -2,14 +2,13 @@
     "name": "pexels-image-downloader-master",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "./pexels/index.js",
     "scripts": {
-        "test": "index.js"
+        "test": "node ."
     },
     "author": "Ahmad",
     "license": "ISC",
     "dependencies": {
-        "js-file-downloader": "^1.1.18",
         "node-downloader-helper": "^1.0.17",
         "node-fetch": "^2.6.1"
     }
