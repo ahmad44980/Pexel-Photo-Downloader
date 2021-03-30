@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pexels Photo Downloader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Pexels</h2>
+        <p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+        <form class="form-inline" action="/action_page.php">
+            <div class="form-group">
+                <label for="search">Search: </label>
+                <input type="search" required class="form-control" id="search" placeholder="search photos" name="search">
+            </div>
+            <div class="form-group">
+                <label for="number">No. Of Assets: </label>
+                <input type="number" required class="form-control" min="1" max="50" id="numbers" placeholder="total" name="number">
+            </div>
+            <div class="form-group">
+                <label for="page">Page No. </label>
+                <input type="number" required class="form-control" min="1" max="9" id="page" placeholder="page" name="page">
+            </div>
+
+            <div class="form-group">
+                <label for="size">Select Size:</label>
+                <select required class="form-control" id="size">
+                  <option selected>Image Size</option>
+                  <option>large</option>
+                  <option>large2x</option>
+                  <option>medium</option>
+                  <option>original</option>
+                  <option>small</option>
+                </select>
+
+                <button type="button" class="btn btn-default" id="doewnloadBtn">Downlaod</button>
+        </form>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+
+        <div class="img-container">
+            <div class="card"></div>
+        </div>
+    </div>
+
+    <script src="pexels-downloader.js"></script>
+    <script src="../dist/js-file-downloader.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+img {
+    width: 24%;
+    height: 200px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.img-container {
+    margin: auto;
+    width: 50%;
+    border: dotted 1px black;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    min-height: 200px;
+    padding: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+.progress {
+    margin: 11px;
+    cursor: pointer;
+}
