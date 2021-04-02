@@ -24,12 +24,11 @@ module.exports.getPhotos = function(images) {
         k = k + 1;
 
         dl
-            .on('download', downloadInfo => console.log('Downloading:', {
+            .on('end', downloadInfo => console.log('Downloading:', {
                 name: downloadInfo.fileName,
                 size: formatBytes(downloadInfo.totalSize)
             }))
-            .on('end', downloadInfo => console.log(chalk.green(downloadInfo.fileName), 'downloaded successfully'))
-
+          
         dl.start();
 
     })
