@@ -1,6 +1,7 @@
 const { DownloaderHelper } = require('node-downloader-helper');
 const fetch = require("node-fetch");
 var fs = require('fs');
+const chalk = require('chalk');
 
 var dir = './result';
 if (!fs.existsSync(dir)) {
@@ -23,10 +24,11 @@ module.exports.getPhotos = function(images) {
         k = k + 1;
 
         dl
-            .on('download', downloadInfo => console.log('Download Begins: ', {
+            .on('download', downloadInfo => console.log('Downloading:', {
                 name: downloadInfo.fileName,
                 size: formatBytes(downloadInfo.totalSize)
             }))
+            .on('end', downloadInfo => console.log(chalk.green(downloadInfo.fileName), 'downloaded successfully'))
 
         dl.start();
 
