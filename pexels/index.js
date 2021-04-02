@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const secrets = require('./secrets');
 const helper = require('./helper/helper');
+const chalk = require('chalk');
 
 var i = 0;
 
@@ -10,7 +11,7 @@ const readline = require('readline').createInterface({
 });
 
 readline.question('Search Photos: ', search => {
-    readline.question('Total Photos?  ', total => {
+    readline.question('Total Photos:  ', total => {
         if (total != '' || total != 0) {
             i = i + 1;
             fetch(`https://api.pexels.com/v1/search?query=${search}&per_page=${total}&page${i}`, {
@@ -29,7 +30,7 @@ readline.question('Search Photos: ', search => {
 
             readline.close();
         } else {
-            console.log('Kindly Enter atleast 1 to continue');
+            console.log(chalk.red('Kindly Enter atleast 1 to Continue'));
             readline.close();
         }
     });

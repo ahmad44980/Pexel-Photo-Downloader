@@ -9,6 +9,7 @@
     "author": "Ahmad",
     "license": "ISC",
     "dependencies": {
+        "chalk": "^4.1.0",
         "node-downloader-helper": "^1.0.17",
         "node-fetch": "^2.6.1"
     }
