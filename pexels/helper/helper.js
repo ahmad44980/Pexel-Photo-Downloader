@@ -17,7 +17,7 @@ function formatBytes(a, b = 2) {
 module.exports.getPhotos = function(images) {
     var k = 0;
     images.map(image => {
-        var url = image.src.medium;
+        var url = image.src.large;
 
         const dl = new DownloaderHelper(url, dir);
         k = k + 1;
